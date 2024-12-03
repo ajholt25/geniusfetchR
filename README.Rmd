@@ -1,0 +1,67 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# geniusfetchR
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of geniusfetchR is to  to assist researchers who want to build lyrical datasets for analysis with a collection of helper functions for fetching song lyrics, album tracklists, and artist discographies from Genius or other lyrics websites. It was created as a workaround to several problems encountered in the geniusr package.
+
+
+## Installation
+
+You can install the development version of geniusfetchR from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("pak")
+pak::pak("ajholt25/R-Programming")
+```
+
+## Examples
+
+
+### Fetch album lyrics for a specific artist and album:
+```{r example-album}
+library(geniusfetchR)
+library(dplyr)
+library(rvest)
+library(stringr)
+library(xml2)
+genius_album_fetcher("Fleetwood Mac", "Rumours")
+```
+
+### Fetch lyrics for multiple artists and albums:
+```{r example-multi-artist}
+library(geniusfetchR)
+library(dplyr)
+library(rvest)
+library(stringr)
+library(xml2)
+artists <- c("Fleetwood Mac", "Fleetwood Mac", "The Rolling Stones", "The Rolling Stones")
+albums <- c("Rumours", "Tusk", "Let It Bleed", "Sticky Fingers")
+genius_album_fetcher(artists, albums)
+```
+
+### Fetch lyrics for a specific song:
+```{r example-song}
+library(geniusfetchR)
+library(dplyr)
+library(rvest)
+library(stringr)
+library(xml2)
+genius_song_fetcher("The Rolling Stones", "Paint It Black")
+```
+

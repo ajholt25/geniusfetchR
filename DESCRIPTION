@@ -1,0 +1,23 @@
+Package: geniusfetchR
+Title: A Set of Functions to Fetch Lyrics and Discographies from Genius API
+Version: 0.0.1.0000
+Authors@R: 
+    person("Amy", "Holt", , "ajholt@usf.edu", role = c("aut", "cre"))
+Description: geniusfetchR is a collection of helper functions designed to 
+    fetch and process song lyrics and discographies, and metadata from the 
+    Genius API or other lyrics websites. Bypasses broken functions in geniusR
+    package.
+    The package provides tools for retrieving album tracklists, individual song 
+    lyrics, and artist discographies. These functions are ideal for text 
+    analysis, sentiment analysis, or building datasets of lyrical content.
+License: GPL (>= 3)
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+Imports: 
+    dplyr,
+    geniusr,
+    rvest,
+    stringr,
+    xml2,
+    tibble
